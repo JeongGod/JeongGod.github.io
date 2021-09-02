@@ -3,7 +3,7 @@ layout: post
 title:  "Spring과 Spring Boot의 차이"
 subtitle:   "Spring Boot"
 categories: study
-tags: spring spring boot
+tags: spring spring-boot
 comments: true
 # header-img: ""
 ---
