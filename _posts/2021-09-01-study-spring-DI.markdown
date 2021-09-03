@@ -7,9 +7,6 @@ tags: spring spring-boot DI
 comments: true
 # header-img: ""
 ---
-## 개요
-> 테스트
-  
 - 목차
 	- [DI (Dependency Injection)](#di-dependency-injection)
     - [Spring과 DI](#spring과-di)
