@@ -78,4 +78,5 @@ keep-alive에는 timeout, max가 존재한다. timeout은 이 시간동안 연�
 ⇒ Event-driven 구조여서 non-blocking을 사용하는 Ngnix등은 Keep Alive를 사용하면서도 Thread를 점유하지 않기 때문에 동시 처리에 유리하다.
 
 > 참고   
+[https://velog.io/@surim014/HTTP란-무엇인가](https://velog.io/@surim014/HTTP%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)    
 [https://goodgid.github.io/HTTP-Keep-Alive/](https://goodgid.github.io/HTTP-Keep-Alive/)

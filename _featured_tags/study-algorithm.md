@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: 그냥저냥
-slug: 그냥저냥
+title: Algorithm
+slug: algorithm
 category: study
 menu: false
-order: 3
+order: 2
 ---

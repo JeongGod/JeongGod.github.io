@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ORM과 JPA에 대해서"
-subtitle:   "Spring Boot - ORM&JPA"
+subtitle:   "Spring Boot - ORM JPA"
 categories: study
 tags: spring spring-boot ORM JPA
 comments: true
