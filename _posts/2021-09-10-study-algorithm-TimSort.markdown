@@ -3,7 +3,7 @@ layout: post
 title:  "Tim Sort는 무엇인가"
 subtitle:   "Tim Sort"
 categories: study
-tags: algorithm, sort, tim sort
+tags: algorithm sort tim sort
 comments: true
 # header-img: ""
 ---
