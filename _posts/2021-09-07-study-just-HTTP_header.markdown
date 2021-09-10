@@ -3,7 +3,7 @@ layout: post
 title:  "HTTP Header와 Cache, Cookie"
 subtitle:   "HTTP와 http header"
 categories: study
-tags: 그냥저냥 http header
+tags: http header
 comments: true
 # header-img: ""
 ---

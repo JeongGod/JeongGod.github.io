@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "HTTP에 대해서"
-subtitle:   "HTTP와 http header"
+subtitle:   "HTTP와 keep-alive"
 categories: study
-tags: 그냥저냥 http header
+tags: http keep alive
 comments: true
 # header-img: ""
 ---
