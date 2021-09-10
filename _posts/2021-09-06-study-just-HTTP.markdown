@@ -3,7 +3,7 @@ layout: post
 title:  "HTTP에 대해서"
 subtitle:   "HTTP와 keep-alive"
 categories: study
-tags: http keep alive
+tags: 그냥저냥 http keep alive
 comments: true
 # header-img: ""
 ---
