@@ -3,7 +3,7 @@ layout: post
 title:  "Tim Sort는 무엇인가"
 subtitle:   "Tim Sort"
 categories: study
-tags: algorithm sort tim sort
+tags: algorithm sort Tim-sort
 comments: true
 # header-img: ""
 ---
@@ -71,16 +71,16 @@ def insertionSort(arr):
 
 다음과 같이 작동하는 알고리즘이다. sort를 할 시에 "주변에 인접한" 값을 비교하여 sort하는 방식으로 **참조 지역성**이 좋다는 것을 알게 된다.
 
-> 참조 지역성이란
-CPU가 캐시 메모리에 현재 리스트에 인접한 데이터들을 담아놓는다. 그 이유는 대부분 리스트를 참조할 경우 순서대로 읽어오는 경우가 많다. 그래서 CPU는 사용자가 다음에 이 메모리들을 읽겠지? 하고 미리 캐시 메모리에 인접한 데이터를 담아놓고 좀 더 빠른 속도를 제공한다.
+> 참조 지역성이란    
+CPU가 캐시 메모리에 현재 리스트에 인접한 데이터들을 담아놓는다. 그 이유는 대부분 리스트를 참조할 경우 순서대로 읽어오는 경우가 많다. 그래서 CPU는 사용자가 다음에 이 메모리들을 읽겠지? 하고 미리 캐시 메모리에 인접한 데이터를 담아놓고 좀 더 빠른 속도를 제공한다.   
 하지만, 리스트에서 무작위로 데이터를 읽을 경우에는 캐시 메모리에 없으므로, 읽어오는데 속도 차이가 난다.
 
- 이 참조 지역성원리에 따라서, Insertion Sort는 arr의 크기가 작은 경우에는 O(n^2)임에도 불구하고 빠른 속도를 보여준다. 
+ 이 참조 지역성원리에 따라서, Insertion Sort는 arr의 크기가 작은 경우에는 O(n^2)임에도 불구하고 빠른 속도를 보여준다.    
  Insertion Sort는 완전 역순일 경우(Worst case)에만 O(n^2)의 시간복잡도가 걸리지만 완전 정렬된 데이터에서는 O(n)으로 준수한 속도를 보여준다. ⇒ 이 점은 실생활 데이터에서 유용하다. 실생활 데이터는 어느정도 정렬되어 있는 확률이 높기 때문이다.
 
 ### Merge Sort
 
-Merge Sort는 모든 arr를 하나의 단위로 쪼갠 뒤, 점점 합쳐나가면서 정렬하는 방식이다. 또, 합쳐나가면서 정렬된 데이터를 담을 arr가 필요하기 때문에 공간복잡도는 O(n)이다.
+Merge Sort는 모든 arr를 하나의 단위로 쪼갠 뒤, 점점 합쳐나가면서 정렬하는 방식이다. 또, 합쳐나가면서 정렬된 데이터를 담을 arr가 필요하기 때문에 공간복잡도는 O(n)이다.   
 정렬된 데이터가 들어온다 하더라도 앞서 말한 방식을 진행한다. 그렇기 때문에 worst든 best든 O(nlogn)을 만족한다.
 
  정렬되어있는 데이터를 쪼갤 필요가 있을까? 아니다. 정렬된 데이터는 냅두는게 최적화된 방식이다. 
@@ -114,11 +114,12 @@ arr[0] ≤ arr[1] ≤ arr[2] ≤ ... ≤ arr[n]
 
 그렇기 때문에 앞서 말한 arr[0]와 arr[1]를 무조건 정렬된 데이터라고 생각하고 정렬을 진행한다.
 
-위 생각으로 미리 앞 선 2개를 비교한다고 생각했다.. 아니라면 말씀부탁드립니다!
+위 생각으로 미리 앞 선 2개를 비교한다고 생각했다.. 아니라면 댓글남겨주세요!
 
-여튼, `Binary Insertion Sort`는 하나의 데이터를 집어넣을 때 마다 O(logn)으로 위치를 찾고, O(n)으로 쉬프트 연산을 통해 데이터를 shift합니다. 
+여튼, `Binary Insertion Sort`는 하나의 데이터를 집어넣을 때 마다 O(logn)으로 위치를 찾고, O(n)으로 쉬프트 연산을 통해 데이터를 shift한다. 
 
-⇒ 그러면 결국 O(n^2)가 걸리는게 아니냐? 하겠지만 쉬프트 연산은 그렇게 오래 걸리지 않기 때문에 더 빠르다.
+⇒ 그러면 결국 O(n^2)가 걸리는게 아니냐? 하겠지만    
+(n*(logn + n))[Binary Insertion Sort] < (n*(n + n))[일반적인 Insertion sort]이기 때문에 더 빠르다.
 
 ### **3. Merge Sort**
 
@@ -151,9 +152,9 @@ stack에다가 Run 하나를 집어넣을 때 마다 아래와 같은 식을 만
 - stack[i] + stack[i+1] < stack[i+2]
 
 이러한 궁금증이 생길 수도 있다. stack을 사용한다면 공간 복잡도가 커지는게 아닌가? 답은 아니다. 이유는 2번식을 보면 알 수 있다. 2번 식은 피보나치 수열과 비슷하다.
-stack의 크기는 결국 위의 식들이 만족하지 않고 계속 쌓이는 경우에 커지는 것인데 그렇다는 것은 stack의 맨 밑바닥 부분이 2번 식을 만족한다는 것이다.
+stack의 크기는 결국 위의 식들이 만족하고 계속 쌓이는 경우에 커지는 것인데 그렇다는 것은 stack의 맨 밑바닥 부분이 2번 식을 만족한다는 것이다.
 
-그렇다면 맨 마지막의 크기는 스택의 크기가 m이라면 Run의 길이는 2^m이 될것이다. 결국 Run의 길이가 N이라면 스택의 크기는 최대 logN이 되기 때문에  걱정할 필요가 없다.
+스택의 맨 마지막의 크기는 스택의 크기가 m이라면 스택의 마지막 크기는 2^m보다 클 것이다. 왜냐하면 우리는 Run의 길이를 2^5 ~ 2^6사이로 잡았기 때문이다. 결국 Run의 길이가 N이라면 스택의 크기는 최대 logN이 되기 때문에 걱정할 필요가 없다.
 
 #### **2. 공간복잡도 줄이기**
 
@@ -214,8 +215,8 @@ Tim Sort에서는 처음부터 Galloping Search로 찾지 않고, 처음 3개의
 
 Python, Java SE 7, Android, Google chrome (V8), Swift언어가 이러한 Tim sort알고리즘을 통해 구현이 되어있다. 알아두면 좋을 알고리즘인 것 같다.
 
-> 참고
-[https://d2.naver.com/helloworld/0315536](https://d2.naver.com/helloworld/0315536)
-[https://orchistro.tistory.com/175](https://orchistro.tistory.com/175)
-[https://www.youtube.com/watch?v=2pjUsuHTqHc&list=LL&index=1&ab_channel=Chan-SuShin](https://www.youtube.com/watch?v=2pjUsuHTqHc&list=LL&index=1&ab_channel=Chan-SuShin)
+> 참고   
+[https://d2.naver.com/helloworld/0315536](https://d2.naver.com/helloworld/0315536)   
+[https://orchistro.tistory.com/175](https://orchistro.tistory.com/175)   
+[https://www.youtube.com/watch?v=2pjUsuHTqHc&list=LL&index=1&ab_channel=Chan-SuShin](https://www.youtube.com/watch?v=2pjUsuHTqHc&list=LL&index=1&ab_channel=Chan-SuShin)   
 [https://thedevmatt.wordpress.com/2016/08/09/should-i-use-binary-or-galloping-search/](https://thedevmatt.wordpress.com/2016/08/09/should-i-use-binary-or-galloping-search/)
